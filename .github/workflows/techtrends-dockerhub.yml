@@ -10,7 +10,7 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
-
+      
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -34,4 +34,4 @@ jobs:
           file: ./dockerfile
           platform: linux/amd64
           push: true
-          tags: duclong1105/techtrends:latest
+          tags: ${{ steps.meta.outputs.tags }}

@@ -78,9 +78,26 @@ def about():
 
 @app.route('/healthz')
 def healthcheck():
+    check_connection = 200
+    string_heath="OK - healthy"
+
+    #check connection to DB
+    try: 
+        connection = sqlite3.connect('database.db')
+    except sqlite3.Error:
+        check_connection = 500
+        string_heath="ERROR - unhealthy"
+
+    #check "posts" table exit or not
+    try:
+        table_check = connection.execute('SELECT * FROM posts').fetchall()
+    except sqlite3.Error:
+        check_connection = 500
+        string_heath="ERROR - unhealthy"
+
     response = app.response_class(
-        response=json.dumps({"result": "OK - healthy"}),
-        status=200
+        response=json.dumps(string_heath),
+        status=check_connection
     )
     return response
 
