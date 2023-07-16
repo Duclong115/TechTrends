@@ -4,7 +4,7 @@ metadata:
   labels:
     app: techtrends
   name: techtrends-service
-  namespace: sandbox
+  namespace: {{.Values.namespace.name }}
 spec:
   ports:
   - port: {{.Values.service.port}}
