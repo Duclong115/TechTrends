@@ -1,15 +1,19 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
 
+# This command I excuted in root directory
 docker build -t techtrends:latest .
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
+
+# I named a container is "techtrends_deploy"
 docker run -d --name techtrends_deploy -p 7111:3111 techtrends:latest 
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
 
+# Get logs of container "techtrends_deploy" with --follow option
 docker logs --follow techtrends_deploy 
 
 ## Logs from the container running the TechTrends application
