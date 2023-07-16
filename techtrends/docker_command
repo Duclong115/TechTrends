@@ -46,5 +46,3 @@ INFO:werkzeug:172.17.0.1 - - [16/Jul/2023 06:23:17] "GET /static/css/main.css HT
 INFO:app:2023-07-16 06:06:43 Non-existing article is accessed
 INFO:werkzeug:172.17.0.1 - - [16/Jul/2023 06:23:20] "GET /99 HTTP/1.1" 404 -
 INFO:werkzeug:172.17.0.1 - - [16/Jul/2023 06:23:20] "GET /static/css/main.css HTTP/1.1" 304 -
-
-
