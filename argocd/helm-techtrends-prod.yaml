@@ -9,6 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+    path: helm
     helm:
       valueFiles:
       - values-prod.yaml
