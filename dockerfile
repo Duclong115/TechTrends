@@ -1,7 +1,7 @@
 FROM python:3.8
 LABEL maintainer="Nguyen Duc Long"
 
-COPY . /app
+COPY ./techtrends /app
 WORKDIR /app
 
 #install dependences and init DB
