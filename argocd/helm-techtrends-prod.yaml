@@ -9,10 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    source:
-      helm:
-        valueFiles:
-        - values-prod.yaml
+    helm:
+      valueFiles:
+      - values-prod.yaml
     repoURL: https://github.com/Duclong115/TechTrends
     targetRevision: HEAD
   syncPolicy: {}
